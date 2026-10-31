@@ -1,0 +1,64 @@
+{
+  "name": "@fastwa/next",
+  "version": "2.0.0",
+  "description": "Next.js App Router integration for the fastwa WhatsApp Cloud API adapter",
+  "keywords": [
+    "fastwa",
+    "whatsapp",
+    "chatbot",
+    "meta",
+    "cloud-api",
+    "webhook",
+    "nextjs",
+    "app-router"
+  ],
+  "homepage": "https://fastwa.org",
+  "bugs": {
+    "url": "https://github.com/fastwa/next/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fastwa/next.git"
+  },
+  "license": "MIT",
+  "author": "Natan Rodrigues",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "format": "prettier 'src/**/*.ts' --write"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "tslib": "2.4.1"
+  },
+  "peerDependencies": {
+    "@fastwa/meta": "^2.0.0",
+    "fastwa": "^2.0.0",
+    "next": ">=15.1.0"
+  },
+  "devDependencies": {
+    "@fastwa/meta": "file:../fastwa/packages/meta",
+    "@types/node": "^22.0.0",
+    "fastwa": "file:../fastwa/packages/fastwa",
+    "next": "^16.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
